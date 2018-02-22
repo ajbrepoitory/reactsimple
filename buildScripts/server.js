@@ -14,6 +14,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.get('/', function (req, res) {
+    console.log("Webapp root Navigated");
     res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
