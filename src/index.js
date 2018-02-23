@@ -6,7 +6,7 @@ class App extends React.Component {
         return(
         <div class="w3-twothird w3-container">
         <h1 class="w3-text-teal">React Heading</h1>
-        <p>This content is rendered through React</p>
+        <p>This content is rendered through React JS</p>
         </div>
         )
     }
