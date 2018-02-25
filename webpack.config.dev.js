@@ -15,7 +15,20 @@ export default {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] }
+      { test:  /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
+      {
+        test: /\.(jpg|png|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 25000,
+        },
+      }, {
+        test: /\.json?$/,
+        loader: 'json'
+      }, {
+        test: /\.css$/,
+        loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+      }
     ]
   }
 
