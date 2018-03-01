@@ -5,7 +5,7 @@ export default {
   devtool: 'inline-source-map',
 
   entry: [
-    path.resolve(__dirname, 'src/index.js') 
+    path.resolve(__dirname, 'src/App.jsx') 
   ],
   target: 'web',
   output: {
@@ -15,21 +15,23 @@ export default {
   },
   module: {
     loaders: [
-      { test:  /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
+      { test:  /\.jsx$/, exclude: /node_modules/, loaders: ['babel-loader'] },
       {
         test: /\.(jpg|png|svg)$/,
         loader: 'url-loader',
         options: {
           limit: 25000,
         },
-      }, {
+      },
+      /*{
         test: /\.json?$/,
-        loader: 'json'
-      }, {
-        test: /\.css$/,
-        loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+        loader: 'json-loader'
+      },*/ 
+      {
+        test:/\.css$/,loader:"style-loader!css-loader" 
       }
     ]
   }
 
 }
+/*'style-loader','css-loader'*/
