@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // using an ES6 transpiler, like babel
-import Image from 'react-image';
 import axios from 'axios';
 import Pane from './Pane.jsx';
 import Slider from './Slider.jsx'
